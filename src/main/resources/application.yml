@@ -1,10 +1,10 @@
 server:
-  port: 9090
+  port: 9898
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     password: root
-    url: jdbc:mysql://localhost/PhoneBookApp
+    url: jdbc:mysql://localhost/usermanagementapp
     username: root
   jpa:
     hibernate:
@@ -13,3 +13,28 @@ spring:
       hibernate:
         dialect: org.hibernate.dialect.MySQL5Dialect
     show-sql: true
+    
+#Smtp properties    
+mail:
+    default-encoding: UTF-8
+    host: smtp.gmail.com
+    username: janeraoamit7@gmail.com
+    password: Amit@6376
+    port: 587
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls: 
+            enable: true
+    protocol: smtp
+    test-connection: false   
+
+
+#Application Messages          
+app:
+   messages:
+     invalidCredentials: Credentials are Invalid.
+     accountLocked: Your Account is locked.
+     regSuccess: Registration almost Complete.Please check your mail to proceed.
+
